@@ -29,16 +29,20 @@
       </p>
     </div>
     <div class="inputs">
-      <label for="color">Change color of text</label
-      ><input style="margin: 0 10px;" type="text" class="color" />
-      <label for="background color">Change background color</label
-      ><input style="margin: 0 10px;" type="text" id="backColor" />
+      <p><h2>
+        You can change the color and the backgrond color of the texts by
+        inputing values. Values should be hexademical
+      </h2>
+      </p>
+      <input type="text" style="margin: 0 10px;"  id="color" placeholder="#a1b2c3" />
+      <input type="text" style="margin: 0 10px;"  id="backColor" placeholder="#a1b2c3" />
     </div>
+    <div class='valid' style=" color: red;padding-top: 10px;"></div>
     <div class="button">
       <button class="btn" style="margin-top: 40px; display: block;">
         Apply
       </button>
     </div>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
