@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table class="sortable-table">
+      <thead>
+        <tr style="font-weight: bold;">
+          <td>Name</td>
+          <td>Grade</td>
+          <td class="sortable-table-age">
+            Age
+            <span class="sort-icon" style="font-size: 15px; cursor: pointer;"
+              >&#10145;</span
+            >
+          </td>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="input-container">
+      <input type="text" class="input" placeholder="Name" />
+      <input type="number" class="input" placeholder="Grade" />
+      <input type="number" class="input" placeholder="Age" />
+      <input type="submit" value="Submit" class="submit" />
+      <p class="warning"></p>
+    </div>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
