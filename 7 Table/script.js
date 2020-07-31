@@ -2,7 +2,9 @@ import { SORTING_ORDERS } from "./constants.js";
 import { createTableRow } from "./helpers.js";
 import { sortStudents } from "./helpers.js";
 
-const inputs = document.querySelectorAll(".input");
+const input1 = document.querySelector(".input1");
+const input2 = document.querySelector(".input2");
+const input3 = document.querySelector(".input3");
 const submit = document.querySelector(".submit");
 const table = document.querySelector(".sortable-table");
 const tableBody = table.querySelector("tbody");
@@ -34,6 +36,28 @@ const state = {
   ],
   order: SORTING_ORDERS.random, // asc = &#11014, desc = &#11015
 };
+
+const renderNewStudent = () => {
+  p.innerText = "";
+  let valid = input1.value.trim() && input2.value.trim() && input3.value.trim();
+  if (valid) {
+    const newStudent = {
+      name: input1.value,
+      grade: input2.value,
+      age: input3.value,
+    };
+    input1.value = "";
+    input2.value = "";
+    input3.value = "";
+    state.students.push(newStudent);
+    render(state);
+  } else {
+    p.innerText = "Please fill all inputs";
+    p.style.color = "red";
+  }
+};
+
+submit.addEventListener("click", renderNewStudent);
 
 const render = (state) => {
   tableBody.innerHTML = "";
